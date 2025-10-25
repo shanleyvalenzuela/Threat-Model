@@ -1,0 +1,130 @@
+{
+  "title": "Web Application Threat Model - Browser/WebApp/Auth/SQL/LDAP",
+  "description": "Recreation of provided DFD: Browser Client, Web Application, Authorization Provider, SQL Database, LDAP with trust boundaries and threats (Spoofing, Tampering, Elevation of Privilege).",
+  "version": "1.0",
+  "diagrams": [
+    {
+      "title": "Main Diagram",
+      "description": "Primary data flow diagram",
+      "objects": [
+        { "id": "actor_browser", "type": "external", "name": "Browser Client", "properties": {} },
+        { "id": "process_webapp", "type": "process", "name": "Web Application", "properties": {} },
+        { "id": "process_auth", "type": "process", "name": "Authorization Provider", "properties": {} },
+        { "id": "store_sql", "type": "datastore", "name": "SQL Database", "properties": {} },
+        { "id": "store_ldap", "type": "datastore", "name": "LDAP", "properties": {} }
+      ],
+      "flows": [
+        {
+          "id": "f_browser_to_webapp",
+          "source": "actor_browser",
+          "target": "process_webapp",
+          "name": "User sends user credentials / Insert feedback comments"
+        },
+        {
+          "id": "f_webapp_to_auth",
+          "source": "process_webapp",
+          "target": "process_auth",
+          "name": "Auth verification / Verifies the privilege"
+        },
+        {
+          "id": "f_auth_to_ldap",
+          "source": "process_auth",
+          "target": "store_ldap",
+          "name": "Verify privilege / Lookup user"
+        },
+        {
+          "id": "f_webapp_to_sql",
+          "source": "process_webapp",
+          "target": "store_sql",
+          "name": "Insert query with feedback comments"
+        },
+        {
+          "id": "f_sql_to_webapp",
+          "source": "store_sql",
+          "target": "process_webapp",
+          "name": "Success = 1 / Feedback comments saved"
+        },
+        {
+          "id": "f_webapp_to_browser",
+          "source": "process_webapp",
+          "target": "actor_browser",
+          "name": "User is authenticated / Feedback saved"
+        }
+      ],
+      "trustBoundaries": [
+        {
+          "id": "tb_internet_boundary",
+          "name": "Generic Trust Boundary - Internet",
+          "description": "Boundary between Browser client (untrusted) and Web Application",
+          "objectIds": ["actor_browser", "process_webapp"]
+        },
+        {
+          "id": "tb_internal_boundary",
+          "name": "Generic Trust Boundary - Internal",
+          "description": "Boundary between Web Application and internal services/datastores (Auth, SQL, LDAP)",
+          "objectIds": ["process_webapp", "process_auth", "store_sql", "store_ldap"]
+        }
+      ]
+    }
+  ],
+  "threats": [
+    {
+      "id": "th_spoof_browser",
+      "title": "Spoofing - Browser Client",
+      "severity": "High",
+      "description": "Attacker spoofs or impersonates a legitimate browser client (phishing, session theft).",
+      "category": "Spoofing",
+      "target": "actor_browser",
+      "mitigation": "Use strong authentication, anti-CSRF tokens, secure cookies, MFA, session binding."
+    },
+    {
+      "id": "th_spoof_webapp",
+      "title": "Spoofing - Web Application",
+      "severity": "Medium",
+      "description": "Malicious site or attacker spoofs the legitimate web application to trick users.",
+      "category": "Spoofing",
+      "target": "process_webapp",
+      "mitigation": "Use TLS everywhere, HSTS, correct cookie flags, and phishing awareness."
+    },
+    {
+      "id": "th_sql_injection",
+      "title": "Tampering - SQL Injection",
+      "severity": "Critical",
+      "description": "User-supplied input is not sanitized; attacker injects SQL to tamper with database contents (as shown in diagram).",
+      "category": "Tampering",
+      "target": "f_webapp_to_sql",
+      "mitigation": "Use parameterized queries / prepared statements, input validation, stored procedures, WAF."
+    },
+    {
+      "id": "th_ldap_tamper",
+      "title": "Tampering - LDAP Injection",
+      "severity": "High",
+      "description": "Attacker manipulates LDAP queries (via Auth provider) to tamper with directory contents or bypass checks.",
+      "category": "Tampering",
+      "target": "f_auth_to_ldap",
+      "mitigation": "Validate input used in LDAP filters, use parameterized LDAP queries and least-privilege for directory binds."
+    },
+    {
+      "id": "th_elev_priv",
+      "title": "Elevation of Privilege - Authorization Provider",
+      "severity": "High",
+      "description": "Authorization provider incorrectly verifies privileges or is compromised, allowing privilege escalation.",
+      "category": "Elevation of Privilege",
+      "target": "process_auth",
+      "mitigation": "Harden auth provider, use least privilege, audit logs, MFA, token signing and verification, proper role mapping."
+    },
+    {
+      "id": "th_spoof_db",
+      "title": "Spoofing - SQL Database",
+      "severity": "Medium",
+      "description": "Attacker spoofs the database connection or intercepts traffic to the DB to inject falsified responses.",
+      "category": "Spoofing",
+      "target": "store_sql",
+      "mitigation": "Use TLS for DB connections, mutual TLS where possible, network segmentation, strong DB credentials."
+    }
+  ],
+  "metadata": {
+    "author": "Generated by ChatGPT",
+    "created": "2025-10-25"
+  }
+}
