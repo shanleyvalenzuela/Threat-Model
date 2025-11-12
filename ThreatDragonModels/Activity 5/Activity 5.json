@@ -190,61 +190,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Enter voter information",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Enter voter information"
-            ],
-            "id": "36d38448-aa6f-409c-887c-0bde547d5a56",
-            "source": {
-              "x": -10,
-              "y": 490
-            },
-            "target": {
-              "cell": "2f04977b-1dfa-4085-b36c-42ddb2792b3b",
-              "port": "7c4d605a-68c2-4718-b412-ac3078d61426"
-            },
-            "vertices": [
-              {
-                "x": 120,
-                "y": 520
-              },
-              {
-                "x": 140,
-                "y": 520
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Render dashboard",
               "description": "",
               "outOfScope": false,
@@ -296,7 +241,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Create voter account",
+              "name": "Query db for voter's credentials",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -309,58 +254,7 @@
               "threats": []
             },
             "labels": [
-              "Create voter account"
-            ],
-            "id": "ea9801d0-79f4-4d6b-813a-3387d49492e1",
-            "source": {
-              "x": 250,
-              "y": 460
-            },
-            "target": {
-              "cell": "e507afa5-67c5-4ad2-ad97-971be3e5bf97",
-              "port": "7c4d605a-68c2-4718-b412-ac3078d61426"
-            },
-            "vertices": [
-              {
-                "x": 520,
-                "y": 490
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Store voter information",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Store voter information"
+              "Query db for voter's credentials"
             ],
             "id": "118c1f8c-4ae6-4ed2-9ba2-bbbf404069b5",
             "source": {
@@ -398,7 +292,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Store candidate information",
+              "name": "Return voter credentials",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -411,21 +305,225 @@
               "threats": []
             },
             "labels": [
-              "Store candidate information"
+              "Return voter credentials"
             ],
-            "id": "5a14d4d1-b55f-412c-8490-3664467de1f9",
+            "id": "8217851d-e91b-42cc-bd20-83899ea2d50c",
             "source": {
-              "x": 800,
-              "y": 310
+              "x": 910,
+              "y": 130
             },
             "target": {
-              "cell": "4fa65013-b8cf-498b-9d07-ec529c3a9dd0",
-              "port": "7ca03285-1355-43c1-93fa-532d8228bd07"
+              "cell": "e507afa5-67c5-4ad2-ad97-971be3e5bf97",
+              "port": "9a0dda42-b19d-4b3e-a298-71b26a16c965"
             },
             "vertices": [
               {
                 "x": 910,
-                "y": 230
+                "y": 240
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Return status",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Return status"
+            ],
+            "id": "50892bb2-1549-48d2-aff9-96aadfe1af76",
+            "source": {
+              "x": 910,
+              "y": 880
+            },
+            "target": {
+              "cell": "0cefe12b-cf39-4eae-9f4f-05e8f16943ae",
+              "port": "7c4d605a-68c2-4718-b412-ac3078d61426"
+            },
+            "vertices": [
+              {
+                "x": 930,
+                "y": 810
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request transaction",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Request transaction"
+            ],
+            "id": "6220e540-aebc-4927-aab3-0b2ea61f1bf4",
+            "source": {
+              "cell": "0cefe12b-cf39-4eae-9f4f-05e8f16943ae",
+              "port": "7c4d605a-68c2-4718-b412-ac3078d61426"
+            },
+            "target": {
+              "cell": "f88227ed-0d89-4a13-bd82-4f081f49e38d",
+              "port": "affdb63b-3611-4c0d-89ac-3953c323f471"
+            },
+            "vertices": [
+              {
+                "x": 700,
+                "y": 800
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Return status of transaction",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Return status of transaction"
+            ],
+            "id": "4fd3a062-68b4-4dae-b6b8-f1c61fadf1ab",
+            "source": {
+              "x": 790,
+              "y": 590
+            },
+            "target": {
+              "cell": "e507afa5-67c5-4ad2-ad97-971be3e5bf97",
+              "port": "7c4d605a-68c2-4718-b412-ac3078d61426"
+            },
+            "vertices": [
+              {
+                "x": 880,
+                "y": 550
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Log transaction",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Log transaction"
+            ],
+            "id": "3bb9e4cb-59a7-482a-b49b-3f556df848cd",
+            "source": {
+              "cell": "e507afa5-67c5-4ad2-ad97-971be3e5bf97",
+              "port": "7c4d605a-68c2-4718-b412-ac3078d61426"
+            },
+            "target": {
+              "cell": "0cefe12b-cf39-4eae-9f4f-05e8f16943ae",
+              "port": "9a0dda42-b19d-4b3e-a298-71b26a16c965"
+            },
+            "vertices": [
+              {
+                "x": 730,
+                "y": 520
               }
             ]
           },
@@ -1032,8 +1130,8 @@
           },
           {
             "position": {
-              "x": 690,
-              "y": 570
+              "x": 670,
+              "y": 590
             },
             "size": {
               "width": 230,
@@ -1153,7 +1251,7 @@
           {
             "position": {
               "x": 700,
-              "y": 822
+              "y": 842
             },
             "size": {
               "width": 210,
