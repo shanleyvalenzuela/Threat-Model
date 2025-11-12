@@ -18,106 +18,88 @@
         "version": "2.5.0",
         "cells": [
           {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
+            "position": {
+              "x": 154.9999999999997,
+              "y": 50
             },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
+            "size": {
+              "width": 200,
+              "height": 110
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "8ef13c91-d566-4a94-8112-57b43131c097",
+            "zIndex": -1,
             "data": {
-              "type": "tm.Flow",
-              "name": "Enter credentials",
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
               "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Enter credentials"
-            ],
-            "id": "3fa9a478-69da-41ea-af40-f1f9064e65e3",
-            "source": {
-              "x": -10,
-              "y": 280
-            },
-            "target": {
-              "cell": "2f04977b-1dfa-4085-b36c-42ddb2792b3b",
-              "port": "9a0dda42-b19d-4b3e-a298-71b26a16c965"
-            },
-            "vertices": [
-              {
-                "x": 130,
-                "y": 280
-              }
-            ]
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
           },
           {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
+            "position": {
+              "x": 154.9999999999997,
+              "y": 270.00000000000034
             },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
+            "size": {
+              "width": 200,
+              "height": 210
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "22d7aebf-3750-45a0-9609-c2ccf05eb447",
+            "zIndex": -1,
             "data": {
-              "type": "tm.Flow",
-              "name": "Enter credentials",
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
               "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 644.9999999999986,
+              "y": 50.00000000000182
             },
-            "labels": [
-              "Enter credentials"
-            ],
-            "id": "6b875b32-39da-4788-b056-7e28ff29c1a0",
-            "source": {
-              "cell": "4feceff2-fcc2-4341-a1be-bcb7a5942e2b",
-              "port": "c4d24be8-e7a1-4c7f-9370-35d0f4042b56"
+            "size": {
+              "width": 310,
+              "height": 450
             },
-            "target": {
-              "cell": "2f04977b-1dfa-4085-b36c-42ddb2792b3b",
-              "port": "7c4d605a-68c2-4718-b412-ac3078d61426"
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "aa47ea32-df98-42f0-bb4d-d0602c998439",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 638.9999999999998,
+              "y": 569.9999999999998
             },
-            "vertices": [
-              {
-                "x": 150,
-                "y": 485
-              }
-            ]
+            "size": {
+              "width": 320,
+              "height": 360
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "859d7290-e753-436c-9dfa-05acebde20a2",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
           },
           {
             "shape": "flow",
@@ -528,6 +510,57 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Enter credentials",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Enter credentials"
+            ],
+            "id": "3fa9a478-69da-41ea-af40-f1f9064e65e3",
+            "source": {
+              "cell": "da7e2909-1b5d-45c9-97ca-db14aa085be9",
+              "port": "70018d2a-745f-4a34-811b-48e2477f792d"
+            },
+            "target": {
+              "cell": "2f04977b-1dfa-4085-b36c-42ddb2792b3b",
+              "port": "9a0dda42-b19d-4b3e-a298-71b26a16c965"
+            },
+            "vertices": [
+              {
+                "x": 255,
+                "y": 220
+              }
+            ]
+          },
+          {
             "position": {
               "x": 700,
               "y": 90
@@ -656,8 +689,8 @@
           },
           {
             "position": {
-              "x": -120,
-              "y": 250
+              "x": 198.7499999999997,
+              "y": 80
             },
             "size": {
               "width": 112.5,
@@ -762,123 +795,6 @@
             "data": {
               "type": "tm.Actor",
               "name": "Voter",
-              "description": "",
-              "isTrustBoundary": false,
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "providesAuthentication": false,
-              "threats": []
-            }
-          },
-          {
-            "position": {
-              "x": -120,
-              "y": 455.00000000000034
-            },
-            "size": {
-              "width": 112.5,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "Admin"
-              },
-              "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "actor",
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "c61bdfc5-2097-4ab8-a665-0aef934737f2"
-                },
-                {
-                  "group": "right",
-                  "id": "c4d24be8-e7a1-4c7f-9370-35d0f4042b56"
-                },
-                {
-                  "group": "bottom",
-                  "id": "70018d2a-745f-4a34-811b-48e2477f792d"
-                },
-                {
-                  "group": "left",
-                  "id": "d93782aa-0670-4c0e-91df-d3e348753dcd"
-                }
-              ]
-            },
-            "id": "4feceff2-fcc2-4341-a1be-bcb7a5942e2b",
-            "zIndex": 14,
-            "data": {
-              "type": "tm.Actor",
-              "name": "Admin",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
