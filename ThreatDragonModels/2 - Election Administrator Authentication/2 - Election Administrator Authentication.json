@@ -6692,9 +6692,18 @@
             }
           }
         ]
+      },
+      {
+        "id": 7,
+        "title": "5-vote casting",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.5.0",
+        "cells": []
       }
     ],
-    "diagramTop": 6,
+    "diagramTop": 8,
     "reviewer": "",
     "threatTop": 0
   }
