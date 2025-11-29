@@ -6694,7 +6694,7 @@
         ]
       },
       {
-        "id": 7,
+        "id": 11,
         "title": "5-vote casting",
         "diagramType": "STRIDE",
         "placeholder": "New STRIDE diagram description",
@@ -6703,7 +6703,7 @@
         "cells": []
       }
     ],
-    "diagramTop": 8,
+    "diagramTop": 12,
     "reviewer": "",
     "threatTop": 0
   }
