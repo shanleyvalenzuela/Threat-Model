@@ -4296,9 +4296,19 @@
             "vertices": [
               {
                 "x": 960,
-                "y": 120
+                "y": 70
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "shape": "flow",
@@ -4348,6 +4358,89 @@
               {
                 "x": 840,
                 "y": 370
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "send encrypted voter credentials, passwords, keys",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "send encrypted voter credentials, passwords, keys"
+            ],
+            "id": "bebde933-dc52-403b-86e6-fc9e43a2edd1",
+            "source": {
+              "cell": "54b7a83b-e60f-465f-9927-174613845b65",
+              "port": "84b5fddb-1b20-496f-991c-593fd801b589"
+            },
+            "target": {
+              "cell": "3b8ecb7e-069f-4cf9-b3b2-eb7066274bc8",
+              "port": "5b6dfe01-c800-4d89-9940-5cd0ea7c055d"
+            },
+            "vertices": [
+              {
+                "x": 440,
+                "y": 530
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              ""
+            ],
+            "id": "3e42df7b-8fde-4508-ba02-1a6c407d0be4",
+            "source": {
+              "x": 1120,
+              "y": 80
+            },
+            "target": {
+              "x": 1060,
+              "y": 380
+            },
+            "vertices": [
+              {
+                "x": 980,
+                "y": 200
               }
             ]
           },
@@ -5078,8 +5171,8 @@
           },
           {
             "position": {
-              "x": 880,
-              "y": 200
+              "x": 1010,
+              "y": 150
             },
             "size": {
               "width": 170,
